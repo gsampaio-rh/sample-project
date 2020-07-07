@@ -24,7 +24,7 @@ func driver(w http.ResponseWriter, r *http.Request) {
 func path(w http.ResponseWriter, r *http.Request) {
 	clientIP := realip.FromRequest(r)
 	log.Println("GET /path from", clientIP)
-	message := "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+	message := "https://media.giphy.com/media/iNkZ9134iEdpu/source.gif"
 	enableCors(&w)
 	w.Write([]byte(message))
 }
