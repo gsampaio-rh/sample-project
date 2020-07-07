@@ -16,7 +16,7 @@ func enableCors(w *http.ResponseWriter) {
 func driver(w http.ResponseWriter, r *http.Request) {
 	clientIP := realip.FromRequest(r)
 	log.Println("GET /driver from", clientIP)
-	message := "Hello Sergio, Your driver is arriving soon in a Hyundai HB20. After arriving, they'll wait 2 minutes before charges begin for time."
+	message := "Hello Sergio, Your driver, Tito, is arriving soon in a Toyota Corolla. After arriving, they'll wait 2 minutes before charges begin for time."
 	enableCors(&w)
 	w.Write([]byte(message))
 }
